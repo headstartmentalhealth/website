@@ -33,11 +33,13 @@ export const metadata = {
 
 const page = () => {
   return (
-    <>
+    <main className="text-neutral-primary dark:text-white ">
       <HeroSection />
       <HowItWorksSection />
-      <TestimonialsSection />
-    </>
+      <div className='dark:bg-gray-900'>
+        <TestimonialsSection />
+      </div>
+    </main>
   );
 };
 

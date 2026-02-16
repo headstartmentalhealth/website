@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
-import './globals.css';
 import { DM_Sans } from 'next/font/google';
+import './globals.css';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import ReduxProvider from '@/lib/redux/provider';
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -10,20 +12,23 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'HeadStart',
-  description: '',
+  title: 'Headstart Connect',
+  description: 'Empowering your future',
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
-    <html lang='en'>
-      <body className={`${dmSans.variable} antialiased`}>
-        <Navbar />
-        {children}
+    <html lang="en">
+      <body className={`${dmSans.variable} antialiased font-dm-sans`}>
+        <ReduxProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </ReduxProvider>
       </body>
     </html>
   );

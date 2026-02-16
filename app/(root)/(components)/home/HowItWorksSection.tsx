@@ -31,7 +31,7 @@ export default function HowItWorksSection() {
           {/* Right white box - screenshot or placeholder */}
           <div className='rounded-lg overflow-hidden bg-white h-64 shadow-md'>
             <Image
-              src='/images/pic.png'
+              src='/images/how-it-works-1.png'
               alt='Step 1'
               width={800}
               height={600}
@@ -45,7 +45,7 @@ export default function HowItWorksSection() {
           {/* Left white box */}
           <div className='rounded-lg overflow-hidden bg-white h-64 shadow-md'>
             <Image
-              src='/images/pic.png'
+              src='/images/how-it-works-2.png'
               alt='Step 2'
               width={800}
               height={600}
@@ -93,7 +93,7 @@ export default function HowItWorksSection() {
           {/* Right white box */}
           <div className='rounded-lg overflow-hidden bg-white h-64 shadow-md'>
             <Image
-              src='/images/pic.png'
+              src='/images/how-it-works-3.png'
               alt='Step 3'
               width={800}
               height={600}

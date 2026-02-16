@@ -5,8 +5,10 @@ import Contact from '../(components)/home/Contact';
 const ContactUs = () => {
   return (
     <>
-      <FAQs />
-      <Contact />
+      <main className='dark:bg-gray-900 mt-4'>
+        <FAQs />
+        <Contact />
+      </main>
     </>
   );
 };

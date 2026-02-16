@@ -2,15 +2,15 @@ import Image from 'next/image';
 
 export default function HeroSection() {
   return (
-    <section className='w-full flex justify-center py-40 px-6 bg-white'>
+    <section className='w-full flex justify-center py-40 px-6 bg-white dark:bg-gray-900'>
       <div className='max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center'>
         {/* LEFT TEXT */}
         <div>
-          <h1 className='text-6xl md:text-7xl font-bold text-[#0A2050] leading-tight'>
+          <h1 className='text-6xl md:text-7xl font-bold text-[#0A2050] dark:text-white leading-tight'>
             Need Help?
           </h1>
 
-          <p className='text-lg  mt-6 max-w-md leading-relaxed'>
+          <p className='text-lg  mt-6 max-w-md text-[#0A2050] dark:text-gray-300 leading-relaxed'>
             Your depressed days are over when you use our application to manage
             your mental health!
           </p>

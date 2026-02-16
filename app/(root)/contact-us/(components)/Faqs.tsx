@@ -24,7 +24,7 @@ export default function FAQs() {
   const [openIndex, setOpenIndex] = useState<number | null>(2); // Last FAQ open by default
 
   return (
-    <section className='bg-white py-20 px-6'>
+    <section className='bg-white dark:bg-gray-900 py-20 px-6 transition-colors duration-300'>
       <div className='max-w-4xl mx-auto'>
         {/* Image Section */}
         <div className='flex justify-center'>
@@ -36,29 +36,32 @@ export default function FAQs() {
         </div>
 
         {/* Title */}
-        <h1 className='text-center text-4xl font-bold mt-16 mb-10'>FAQs</h1>
+        <h1 className='text-center text-4xl font-bold mt-16 mb-10 text-[#0A2050] dark:text-white'>FAQs</h1>
 
         {/* FAQ List */}
         <div className='space-y-5'>
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className='border border-gray-300 rounded-lg p-5 cursor-pointer transition'
+              className={`border rounded-lg p-5 cursor-pointer transition ${openIndex === index
+                  ? 'border-[#0A2050] dark:border-blue-500 bg-gray-50 dark:bg-gray-800'
+                  : 'border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 hover:border-gray-400 dark:hover:border-gray-600'
+                }`}
               onClick={() => setOpenIndex(openIndex === index ? null : index)}
             >
               {/* Question Row */}
               <div className='flex justify-between items-center'>
-                <p className='font-semibold text-lg'>{faq.question}</p>
+                <p className='font-semibold text-lg text-gray-900 dark:text-white'>{faq.question}</p>
 
                 {/* Icon */}
-                <span className='text-2xl'>
+                <span className='text-2xl text-[#0A2050] dark:text-blue-400'>
                   {openIndex === index ? '−' : '+'}
                 </span>
               </div>
 
               {/* Answer */}
               {openIndex === index && (
-                <p className='text-gray-600 mt-4 text-sm leading-relaxed'>
+                <p className='text-gray-600 dark:text-gray-300 mt-4 text-sm leading-relaxed'>
                   {faq.answer}
                 </p>
               )}

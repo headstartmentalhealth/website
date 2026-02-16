@@ -1,12 +1,13 @@
-import React from 'react';
+import HowItWorksHero from '../(components)/how-it-works/HowItWorksHero';
 import HowItWorksSection from '../(components)/home/HowItWorksSection';
 
-const HomeItWorks = () => {
+const HowItWorks = () => {
   return (
-    <section className='mt-20'>
+    <section>
+      <HowItWorksHero />
       <HowItWorksSection />
     </section>
   );
 };
 
-export default HomeItWorks;
+export default HowItWorks;

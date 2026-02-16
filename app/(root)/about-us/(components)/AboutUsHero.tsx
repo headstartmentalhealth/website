@@ -1,46 +1,30 @@
+import Image from 'next/image';
+
 export default function AboutUsHero() {
   return (
-    <section className='bg-[#11254B] mt-20 py-20 px-6 md:px-10 lg:px-20 text-white'>
-      <div className='max-w-5xl mx-auto'>
-        {/* Page Title */}
-        <h1 className='text-4xl md:text-5xl font-bold mb-12'>About Us</h1>
+    <section className='w-full flex justify-center pt-40 pb-20 px-6 bg-white dark:bg-gray-900'>
+      <div className='max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center'>
+        {/* LEFT TEXT */}
+        <div>
+          <h1 className='text-5xl md:text-6xl font-bold text-[#0A2050] dark:text-white leading-tight mb-6'>
+            About Us
+          </h1>
+          <p className='text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8'>
+            Building a community where mental wellness is accessible, supportive, and free from stigma. Learn more about our journey and the team behind HeadStart Connect.
+          </p>
+        </div>
 
-        {/* Two Column Layout */}
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-12'>
-          {/* LEFT CONTENT */}
-          <div className='space-y-10'>
-            <p className='text-base leading-relaxed text-gray-200 max-w-lg'>
-              We are HeadStart, an organization that focuses on providing the
-              necessary tool that helps bridge the gap that comes with accessing
-              mental health care and support.
-              <br />
-              <br />
-              We saw the need to make this available to those in need of it and
-              this has been a game changer ever since.
-            </p>
-
-            {/* Mission */}
-            <div>
-              <h2 className='text-lg font-bold tracking-wide'>OUR MISSION</h2>
-              <p className='mt-3 text-base text-gray-200 max-w-lg'>
-                We care about mental health so we offered to be of service by
-                all means necessary.
-              </p>
-            </div>
-
-            {/* Vision */}
-            <div>
-              <h2 className='text-lg font-bold tracking-wide'>OUR VISION</h2>
-              <p className='mt-3 text-base text-gray-200 max-w-lg'>
-                Our vision is to get as many people as possible back on track to
-                a stable mental health for improved everyday living.
-              </p>
-            </div>
-          </div>
-
-          {/* RIGHT CONTENT (White Placeholder Box) */}
-          <div className='flex justify-center md:justify-end'>
-            <div className='bg-white rounded-xl shadow-md w-full h-64 md:h-80 lg:h-[350px]'></div>
+        {/* RIGHT IMAGE */}
+        <div className='flex justify-center'>
+          <div className='relative w-full max-w-md aspect-square flex items-center justify-center'>
+            <Image
+              src='/images/about_us_hero.png'
+              alt='About HeadStart Connect'
+              width={500}
+              height={500}
+              className='object-contain rounded-lg'
+              priority
+            />
           </div>
         </div>
       </div>

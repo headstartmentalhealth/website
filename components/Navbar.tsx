@@ -3,22 +3,35 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
+import { useState } from 'react';
+
 export default function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
   const isActive = (path: string) =>
-    pathname === path ? 'font-bold text-fg-brand' : 'text-heading';
+    pathname === path ? 'font-bold text-primary-600 dark:text-primary-400' : 'text-gray-900 dark:text-white';
 
   return (
-    <nav className='bg-neutral-primary fixed w-full z-20 top-0 start-0 border-default'>
+    <nav className='bg-white dark:bg-gray-800 fixed w-full z-20 top-0 start-0 border-default border-b border-gray-200 dark:border-gray-800 px-4 md:px-0'>
       <div className='max-w-5xl flex flex-wrap items-center justify-between mx-auto py-4'>
-        <Link href='/' className='flex space-x-3 rtl:space-x-reverse'>
-          <img src='/icons/icon.png' className='h-10' alt='Headstart Logo' />
+        <Link href='/' className='flex space-x-3 rtl:space-x-reverse items-center'>
+          <img
+            src='/logo.png'
+            className='h-10 dark:hidden'
+            alt='HeadStart Logo'
+          />
+          <img
+            src='/logo-white.png'
+            className='h-10 hidden dark:block'
+            alt='HeadStart Logo'
+          />
         </Link>
 
         <button
           data-collapse-toggle='navbar-default'
           type='button'
-          className='inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary'
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className='inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-600 dark:text-gray-300 rounded-base md:hidden hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-700'
         >
           <span className='sr-only'>Open main menu</span>
           <svg
@@ -39,8 +52,8 @@ export default function Navbar() {
           </svg>
         </button>
 
-        <div className='hidden w-full md:block md:w-auto' id='navbar-default'>
-          <ul className='font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary'>
+        <div className={`${isMenuOpen ? 'block' : 'hidden'} w-full md:block md:w-auto`} id='navbar-default'>
+          <ul className='font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 dark:border-gray-600 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 '>
             <li>
               <Link
                 href='/'
