@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function AboutSection() {
   return (
-    <section className='bg-[#11254B] py-20 px-6 md:px-10 lg:px-20 text-white'>
+    <section className='bg-[#11254B] pt-40 pb-20 px-6 md:px-10 lg:px-20 text-white'>
       <div className='max-w-5xl mx-auto'>
         {/* Section Title */}
         <h2 className='text-3xl md:text-4xl font-bold mb-12'>Who We Are</h2>

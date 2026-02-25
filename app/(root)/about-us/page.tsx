@@ -6,7 +6,7 @@ import AboutSection from './(components)/AboutSection';
 const AboutUs = () => {
   return (
     <>
-      <AboutUsHero />
+      {/* <AboutUsHero /> */}
       <AboutSection />
       {/* <OurTeam /> */}
     </>

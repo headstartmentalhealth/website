@@ -14,10 +14,10 @@ export default function HowItWorksSection() {
           {/* Left Text */}
           <div className='flex flex-col items-start'>
             <div className='flex items-center gap-3'>
-              <div className='w-7 h-7 rounded-full bg-[#7EB694] text-white flex items-center justify-center font-semibold'>
+              <div className='w-7 h-7 rounded-full bg-[#7EB694] text-white flex items-center justify-center font-bold'>
                 1
               </div>
-              <span className='text-white font-semibold'>
+              <span className='text-white font-bold'>
                 DOWNLOAD <br /> THE APP
               </span>
             </div>
@@ -56,10 +56,10 @@ export default function HowItWorksSection() {
           {/* Right Text */}
           <div>
             <div className='flex items-center gap-3'>
-              <div className='w-7 h-7 rounded-full bg-[#7EB694] text-white flex items-center justify-center font-semibold'>
+              <div className='w-7 h-7 rounded-full bg-[#7EB694] text-white flex items-center justify-center font-bold'>
                 2
               </div>
-              <span className='text-white font-semibold'>
+              <span className='text-white font-bold'>
                 FILL IN YOUR <br /> DETAILS
               </span>
             </div>
@@ -76,17 +76,16 @@ export default function HowItWorksSection() {
           {/* Left Text */}
           <div>
             <div className='flex items-center gap-3'>
-              <div className='w-7 h-7 rounded-full bg-[#7EB694] text-white flex items-center justify-center font-semibold'>
+              <div className='w-7 h-7 rounded-full bg-[#7EB694] text-white flex items-center justify-center font-bold'>
                 3
               </div>
-              <span className='text-white font-semibold'>
-                CHECK-IN DAILY <br /> TO WIN REWARDS
+              <span className='text-white font-bold'>
+                CHECK-IN DAILY <br /> TO TRACK YOUR MOOD
               </span>
             </div>
 
             <p className='text-gray-300 mt-4 max-w-xs leading-relaxed'>
-              Loads of reward await you as you use our app daily. Referring a
-              friend gets you even more reward.
+              We keep track of your mood to recommend the best in-app solution for your health.
             </p>
           </div>
 
