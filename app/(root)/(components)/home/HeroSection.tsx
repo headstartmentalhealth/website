@@ -11,21 +11,21 @@ const slides = [
     tags: ['Depression', 'Anxiety', 'Self-Care'],
   },
   {
-    image: '/images/hero_teen.png',
+    image: '/images/hero_black_teen_female.png',
     title: 'You Are Not Alone',
     description:
       "Growing up is tough, but you don't have to do it by yourself. We're here to listen.",
     tags: ['Peer Pressure', 'School Stress', 'Identity'],
   },
   {
-    image: '/images/hero_male.png',
+    image: '/images/hero_black_adult_male.png',
     title: 'Redefine Strength',
     description:
       'True resilience is knowing when to ask for help. Take charge of your mental health.',
     tags: ['Work Stress', 'Burnout', 'Anxiety'],
   },
   {
-    image: '/images/hero_kid.png',
+    image: '/images/hero_black_kid_male.png',
     title: 'Happy Minds',
     description:
       'Building emotional confidence from the start. Tools for a brighter future.',
@@ -47,11 +47,11 @@ export default function HeroSection() {
   const currentSlide = slides[currentSlideIndex];
 
   return (
-    <section className='w-full flex justify-center py-40 px-6 bg-white dark:bg-gray-900'>
+    <section className='w-full flex justify-center pt-24 pb-32 md:py-40 px-6 bg-white dark:bg-gray-900'>
       <div className='max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center'>
         {/* LEFT TEXT */}
         <div>
-          <h1 className='text-6xl md:text-7xl font-bold text-[#0A2050] dark:text-white leading-tight transition-all duration-500'>
+          <h1 className='text-4xl md:text-7xl font-bold text-[#0A2050] dark:text-white leading-tight transition-all duration-500'>
             {currentSlide.title}
           </h1>
 
