@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 const slides = [
@@ -59,9 +60,11 @@ export default function HeroSection() {
             {currentSlide.description}
           </p>
 
-          <button className='mt-8 bg-[#7EB694] text-[#0A3C2F] px-8 py-3 rounded-full font-medium shadow-sm'>
-            Get Started!
-          </button>
+          <Link href='/get-started'>
+            <button className='mt-8 bg-[#7EB694] text-[#0A3C2F] px-8 py-3 rounded-full font-medium shadow-sm cursor-pointer hover:bg-[#6da886] transition-colors'>
+              Get Started!
+            </button>
+          </Link>
         </div>
 
         {/* RIGHT IMAGE + TAGS */}
