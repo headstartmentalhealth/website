@@ -66,7 +66,7 @@ export default function HeroSection() {
 
         {/* RIGHT IMAGE + TAGS */}
         <div className='relative flex justify-center'>
-          <div className='w-[600px] h-[500px] rounded-xl overflow-hidden shadow-md relative'>
+          <div className='w-full max-w-[400px] md:w-[600px] h-[350px] md:h-[500px] rounded-xl overflow-hidden shadow-md relative'>
             <div
               className='flex transition-transform duration-700 ease-in-out h-full'
               style={{ transform: `translateX(-${currentSlideIndex * 100}%)` }}
